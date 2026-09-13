@@ -2,7 +2,4 @@ services:
   ntfy:
     image: binwiederhier/ntfy
     restart: unless-stopped
-    ports:
-      - 80:80
     command: serve
-    
