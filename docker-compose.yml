@@ -7,4 +7,11 @@ services:
       NTFY_DATABASE_URL: ${POSTGRES_URL}
     ports:
       - 80
+    configs:
+      - source: temps_yml
+        target: /etc/ntfy/templates/temps.yml
     command: serve
+
+configs:
+  temps_yml:
+    file: ./templates/temps.yml

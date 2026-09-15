@@ -1,0 +1,17 @@
+title: |
+  {{- if eq .severity "critical" }}
+    🚨
+  {{- else if eq .severity "warning" }}
+    ⚠️
+  {{- else }}
+    ℹ️
+  {{- end }}
+   {{ .title }}
+message: |
+  {{ .message }}
+priority: |
+  {{ if eq .priority "critical" }}5
+  {{ else if eq .priority "high" }}4
+  {{ else if eq .priority "normal" }}3
+  {{ else }} 2
+  {{ end }}
